@@ -1,16 +1,22 @@
-# ============================================================
-# Group config — EDIT ME (one per group). Values here override
-# the track defaults loaded from `track_config`.
-# ============================================================
-group_id: G00                     # e.g. G07
-owner: "TODO: tên người ký duyệt (role)"   # mandatory for every Decision
-track_config: tracks/t02.yaml     # pick your challenge: tracks/t01.yaml ... tracks/t14.yaml
-track: t02                        # must match track_config
-input: fixtures/t02_raw_qc        # or data/real/... if your instructor provided a real pack
+group_id: "2A202603206"
+owner: "T02 QC release reviewer"
+track_config: tracks/t02.yaml
+track: t02
+input: fixtures/t02_raw_qc
 output: out/
 seed: 42
-offline: true                     # demo/eval must not touch the network
-strict_provenance: true           # fail if manifest.csv hashes do not match
-
-# Track params (merged over track_config.params). Freeze before evaluation.
-params: {}
+offline: true
+strict_provenance: true
+params:
+  budget: 20
+  baseline_laplacian: 300
+  blur_laplacian:
+    cam_A: 75
+    cam_B: 45
+    default: 60
+  min_mean:
+    day: 45
+    dusk: 32
+    night: 14
+  min_glare_tile_fraction: 0.07
+  min_block_ratio: 1.8
