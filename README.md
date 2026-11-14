@@ -9,9 +9,9 @@ vấn đề, baseline, thuật toán, đánh giá trung thực, human-in-the-loo
 
 ## Bài nộp · T02 Raw QC Triage
 
-[Báo cáo](reports/group_report.md) · [Bảng kết quả](reports/table1_baseline_vs_poc.md) · [Demo](demo/showcase.md) · [Tag final-24h](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy/tree/final-24h)
+[Báo cáo](reports/group_report.md) · [Bảng kết quả](reports/table1_baseline_vs_poc.md) · [Demo](demo/showcase.md) · [Bản nộp đã review](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy/tree/final-24h-reviewed)
 
-Chạy `python -m src.main --offline --seed 42` sau khi cài dependency. Mở `out/contact_sheet.html` để review. Chạy `python -m tools.t02_evidence` để tái lập benchmark nội bộ, audit và stress test. Báo cáo ghi rõ phương pháp gán nhãn thị giác bằng AI và phạm vi của review replay. Giảng viên cung cấp ground truth chính thức khi chấm.
+Chạy `python -m src.main --offline --seed 42` sau khi cài dependency. Mở `out/contact_sheet.html` để review. Chạy `python -m tools.t02_evidence` để tái lập benchmark nội bộ, audit và stress test. Báo cáo ghi rõ phương pháp gán nhãn thị giác bằng AI và cách chạy lại các quyết định review đã xuất. Giảng viên cung cấp ground truth chính thức khi chấm.
 
 ## 1. Quickstart (≤ 5 phút, chạy offline)
 

@@ -4,9 +4,9 @@
 |---|---|
 | Học viên | Phùng Danh Khoa · 2A202603206 |
 | Phạm vi | T02 · Bài làm trên fork cá nhân. Mã học viên dùng làm mã lần chạy. |
-| Báo cáo và artefact | [GitHub fork](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy) · [final-24h](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy/tree/final-24h) |
+| Báo cáo và artefact | [GitHub fork](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy) · [final-24h-reviewed](https://github.com/phungdanhkhoa/K5-Day6-L2A-PhungDanhKhoa-2A202603206-DataGovernanceAndPrivacy/tree/final-24h-reviewed) |
 | Phiên bản tạo evidence | `67ffafd` · cấu hình và phương pháp chốt ở `411ab92` |
-| Xác nhận | Gold thị giác và review replay do Codex thực hiện. Chờ người học xác nhận review. |
+| Xác nhận | Phung Danh Khoa đã duyệt cả 20 mục trong contact sheet. Gold thị giác nội bộ do Codex lập. |
 
 ## 1. Vấn đề và quyết định
 
@@ -62,7 +62,7 @@ Recall theo loại lỗi cho thấy compression tăng từ 6/8 lên 8/8, còn gl
 - **Ảnh đêm hữu ích và camera mềm.** `img_06_0` là ảnh sạch từ cam_B. Laplacian 275.7 khiến baseline đề xuất RECAPTURE và xếp hạng 9. PoC đề xuất KEEP, hạng 22. [Ảnh img_06_0](../fixtures/t02_raw_qc/images/img_06_0.jpg)
 - **Lóa cục bộ trên ảnh nét.** `img_05_3` có Laplacian 1324.5, nhưng lóa nằm trên cụm xe. Baseline xếp hạng 31. Tỷ lệ bão hòa 0.258 tại ô sáng nhất đưa ảnh lên hạng 10 trong PoC. [Ảnh img_05_3](../fixtures/t02_raw_qc/images/img_05_3.jpg)
 - **Lóa tán xạ ban đêm.** `img_03_2` và `img_06_3` chỉ có tỷ lệ bão hòa 0.025 và 0.027 ở ô sáng nhất. Cả hai dưới ngưỡng 0.07, xếp hạng 29 và 25 và bị bỏ sót. Cần thử đo tương phản cục bộ hoặc chỉ báo vùng sáng theo camera trên một tập dev mới. [Ảnh img_03_2](../fixtures/t02_raw_qc/images/img_03_2.jpg) · [Ảnh img_06_3](../fixtures/t02_raw_qc/images/img_06_3.jpg)
-- **Nén nhẹ cần override.** `img_19_2` có tỷ lệ blockiness 1.62. PoC đưa vào hàng review ở hạng 18 nhưng đề xuất KEEP. Replay sửa thành RECAPTURE vì artefact nén thấy quanh viền vật thể. [Ảnh img_19_2](../fixtures/t02_raw_qc/images/img_19_2.jpg)
+- **Nén nhẹ với quyết định KEEP.** `img_19_2` có tỷ lệ blockiness 1.62. PoC đưa ảnh vào hàng review ở hạng 18 và đề xuất KEEP. Gold thị giác nội bộ ghi nhận artefact nén quanh viền vật thể. Người duyệt chấp thuận KEEP. Hai kết quả phản ánh hai câu hỏi khác nhau, nhận diện dấu hiệu nén và quyết định có cần chụp lại. [Ảnh img_19_2](../fixtures/t02_raw_qc/images/img_19_2.jpg)
 
 Trong 10 ảnh stress với bố cục khác, PoC đánh dấu đúng 8/8 ảnh có lỗi và giữ 2/2 ảnh sạch tại ngưỡng vận hành. Baseline đánh dấu 4/8 ảnh lỗi và giữ 2/2 ảnh sạch. Nhãn stress đến từ phép biến đổi đã biết. Bài kiểm tra dùng cùng thư viện mô phỏng của starter và kích thước ảnh tương đương, nên sức khái quát ra camera thật vẫn chưa được kiểm chứng. [Kết quả từng ảnh](evidence/stress_results.csv)
 
@@ -70,7 +70,7 @@ Trong 10 ảnh stress với bố cục khác, PoC đánh dấu đúng 8/8 ảnh 
 
 Contact sheet nhúng thumbnail để mở offline. Reviewer có thể nhập tên, chọn quyết định, điền lý do và xuất CSV. Pipeline kiểm tra ID thuộc queue hiện tại, tên reviewer và giá trị override. Nhật ký ghi actor, hành động, giá trị trước/sau và lý do. `skip` giữ mục ở trạng thái chưa giải quyết. `escalate` khiến ảnh chuyển HOLD. File chấm giữ nguyên score qua review.
 
-Evidence có 19 `approve` và một `edit` từ **Codex visual assessment (AI)**. Replay chuyển HOLD sang REWORK với 18 đề xuất chụp lại. Đây là minh họa việc áp dụng quyết định và audit. Người duyệt thật cần mở contact sheet và ký quyết định vận hành. [Contact sheet](../demo/contact_sheet.html) · [CSV review](evidence/review_queue_reviewed.csv) · [Audit](evidence/audit_log.jsonl) · [Decision log](evidence/decision_log.csv)
+CSV xuất từ contact sheet ghi 20 `approve` của **Phung Danh Khoa**. Pipeline áp dụng các quyết định, giữ nguyên 17 RECAPTURE và 3 KEEP trong hàng review, rồi chuyển HOLD sang REWORK với lý do `RECAPTURE_REQUIRED`. Nhật ký lưu thời điểm review do CSV cung cấp. Điểm benchmark và thứ tự xếp hạng giữ nguyên. [Contact sheet](../demo/contact_sheet.html) · [CSV review](evidence/review_queue_reviewed.csv) · [Audit](evidence/audit_log.jsonl) · [Decision log](evidence/decision_log.csv)
 
 ## 6. Tái lập
 
@@ -84,13 +84,13 @@ python -m pytest -ra
 python -m tools.t02_evidence
 ```
 
-Kết quả kiểm tra là 49 passed, 39 skipped. Các skip cần overlay giảng viên. Preflight có 0 lỗi và hai cảnh báo về dữ liệu thật và model tùy chọn. Công cụ tạo evidence chạy lại baseline và PoC, xuất bảng metric, replay review đã ghi nguồn và tạo lại stress pack. Hai bản `run_info` ghi hash cấu hình, commit, seed, môi trường và runtime của mỗi lần chạy.
+Kết quả kiểm tra là 49 passed, 39 skipped. Các skip cần overlay giảng viên. Preflight có 0 lỗi và hai cảnh báo về dữ liệu thật và model tùy chọn. Công cụ tạo evidence chạy lại baseline và PoC, xuất bảng metric, áp dụng lại CSV review của học viên và tạo lại stress pack. Hai bản `run_info` ghi hash cấu hình, commit, seed, môi trường và runtime của mỗi lần chạy.
 
 ## 7. Giới hạn và đóng góp
 
 Cần một reviewer độc lập cho ca nghi ngờ, tập camera thực có quyền sử dụng và theo dõi miss theo điều kiện sáng. Khi số ảnh tăng 10 lần, B=20 làm giảm tỷ lệ ảnh được xem. Có thể tăng ngân sách theo tỷ lệ hoặc đặt quota theo camera, rồi đo lại trên holdout mới. Trước khi áp dụng cho dữ liệu thật, owner và DPO cần xác nhận quyền lưu giữ, quyền truy cập bản gốc và cách ghi audit. Kết quả chỉ đánh giá chất lượng ảnh tổng hợp.
 
-Codex hỗ trợ triển khai, lập nhãn thị giác, kiểm thử và soạn báo cáo. Lịch sử Git ghi các thay đổi trên fork. Chưa có xác nhận của reviewer hoặc ghi nhận trình bày nhóm. [Bảng đóng góp](team_contributions.csv) · [Bốn slide demo](../demo/showcase.md)
+Codex hỗ trợ triển khai, lập nhãn thị giác, kiểm thử và soạn báo cáo. Lịch sử Git ghi các thay đổi trên fork. Phùng Danh Khoa duyệt 20 ảnh ưu tiên. Phần trình bày nhóm chưa được ghi nhận. [Bảng đóng góp](team_contributions.csv) · [Bốn slide demo](../demo/showcase.md)
 
 ## 8. Tài liệu tham khảo
 

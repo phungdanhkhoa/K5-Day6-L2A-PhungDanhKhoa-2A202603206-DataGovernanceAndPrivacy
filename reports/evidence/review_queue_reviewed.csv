@@ -1,21 +1,21 @@
 rank,item_id,score,reason,suggested_action,slice,evidence_path,reviewer,reviewer_decision,override_value,review_note,reviewed_at
-1,img_13_3,0.97581,"blur (Lap=1.9, mean=34.8, bright tile=0.000, block ratio=0.95)",RECAPTURE,night,images/img_13_3.jpg,Codex visual assessment (AI),approve,,Visual gold: blur. Demonstration replay. Human sign-off pending.,
-2,img_15_2,0.959316,"blur (Lap=1.9, mean=98.1, bright tile=0.000, block ratio=1.14)",RECAPTURE,dusk,images/img_15_2.jpg,Codex visual assessment (AI),approve,,Visual gold: blur. Demonstration replay. Human sign-off pending.,
-3,img_19_3,0.939049,"blur (Lap=4.9, mean=118.1, bright tile=0.000, block ratio=1.10)",RECAPTURE,day,images/img_19_3.jpg,Codex visual assessment (AI),approve,,Visual gold: blur. Demonstration replay. Human sign-off pending.,
-4,img_16_2,0.93459,"blur (Lap=5.2, mean=123.7, bright tile=0.000, block ratio=1.18)",RECAPTURE,day,images/img_16_2.jpg,Codex visual assessment (AI),approve,,Visual gold: blur. Demonstration replay. Human sign-off pending.,
-5,img_17_2,0.934579,"glare (Lap=465.1, mean=181.3, bright tile=1.000, block ratio=1.09)",RECAPTURE,day,images/img_17_2.jpg,Codex visual assessment (AI),approve,,Visual gold: glare. Demonstration replay. Human sign-off pending.,
-6,img_15_3,0.916244,"dark (Lap=14.5, mean=2.9, bright tile=0.000, block ratio=0.67)",RECAPTURE,dusk,images/img_15_3.jpg,Codex visual assessment (AI),approve,,Visual gold: dark. Demonstration replay. Human sign-off pending.,
-7,img_23_3,0.901978,"dark (Lap=49.2, mean=4.9, bright tile=0.000, block ratio=0.64)",RECAPTURE,day,images/img_23_3.jpg,Codex visual assessment (AI),approve,,Visual gold: dark. Demonstration replay. Human sign-off pending.,
-8,img_17_3,0.890566,"dark (Lap=47.6, mean=5.5, bright tile=0.000, block ratio=0.64)",RECAPTURE,day,images/img_17_3.jpg,Codex visual assessment (AI),approve,,Visual gold: dark. Demonstration replay. Human sign-off pending.,
-9,img_01_2,0.801335,"dark (Lap=353.6, mean=3.5, bright tile=0.000, block ratio=1.23)",RECAPTURE,night,images/img_01_2.jpg,Codex visual assessment (AI),approve,,Visual gold: dark. Demonstration replay. Human sign-off pending.,
-10,img_05_3,0.786768,"glare (Lap=1324.5, mean=123.9, bright tile=0.258, block ratio=1.33)",RECAPTURE,day,images/img_05_3.jpg,Codex visual assessment (AI),approve,,Visual gold: glare. Demonstration replay. Human sign-off pending.,
-11,img_06_2,0.672645,"compression (Lap=347.3, mean=26.9, bright tile=0.002, block ratio=3.70)",RECAPTURE,night,images/img_06_2.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-12,img_05_2,0.633449,"compression (Lap=804.4, mean=120.9, bright tile=0.010, block ratio=3.11)",RECAPTURE,day,images/img_05_2.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-13,img_23_2,0.627869,"compression (Lap=678.9, mean=115.9, bright tile=0.007, block ratio=3.04)",RECAPTURE,day,images/img_23_2.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-14,img_01_3,0.606879,"compression (Lap=1094.1, mean=29.3, bright tile=0.003, block ratio=2.78)",RECAPTURE,night,images/img_01_3.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-15,img_13_2,0.580306,"compression (Lap=1206.6, mean=32.3, bright tile=0.008, block ratio=2.49)",RECAPTURE,night,images/img_13_2.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-16,img_16_3,0.530701,"compression (Lap=671.1, mean=123.0, bright tile=0.008, block ratio=2.04)",RECAPTURE,day,images/img_16_3.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-17,img_03_3,0.515122,"compression (Lap=375.7, mean=33.0, bright tile=0.003, block ratio=1.91)",RECAPTURE,night,images/img_03_3.jpg,Codex visual assessment (AI),approve,,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-18,img_19_2,0.474192,"below thresholds (Lap=908.9, mean=117.7, bright tile=0.016, block ratio=1.62)",KEEP,day,images/img_19_2.jpg,Codex visual assessment (AI),edit,RECAPTURE,Visual gold: compression. Demonstration replay. Human sign-off pending.,
-19,img_23_1,0.457787,"below thresholds (Lap=1052.0, mean=116.3, bright tile=0.010, block ratio=1.52)",KEEP,day,images/img_23_1.jpg,Codex visual assessment (AI),approve,,Visual gold: none. Demonstration replay. Human sign-off pending.,
-20,img_05_0,0.419292,"below thresholds (Lap=1505.5, mean=122.1, bright tile=0.009, block ratio=1.30)",KEEP,day,images/img_05_0.jpg,Codex visual assessment (AI),approve,,Visual gold: none. Demonstration replay. Human sign-off pending.,
+1,img_13_3,0.97581,"blur (Lap=1.9, mean=34.8, bright tile=0.000, block ratio=0.95)",RECAPTURE,night,images/img_13_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+2,img_15_2,0.959316,"blur (Lap=1.9, mean=98.1, bright tile=0.000, block ratio=1.14)",RECAPTURE,dusk,images/img_15_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+3,img_19_3,0.939049,"blur (Lap=4.9, mean=118.1, bright tile=0.000, block ratio=1.10)",RECAPTURE,day,images/img_19_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+4,img_16_2,0.93459,"blur (Lap=5.2, mean=123.7, bright tile=0.000, block ratio=1.18)",RECAPTURE,day,images/img_16_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+5,img_17_2,0.934579,"glare (Lap=465.1, mean=181.3, bright tile=1.000, block ratio=1.09)",RECAPTURE,day,images/img_17_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+6,img_15_3,0.916244,"dark (Lap=14.5, mean=2.9, bright tile=0.000, block ratio=0.67)",RECAPTURE,dusk,images/img_15_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+7,img_23_3,0.901978,"dark (Lap=49.2, mean=4.9, bright tile=0.000, block ratio=0.64)",RECAPTURE,day,images/img_23_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+8,img_17_3,0.890566,"dark (Lap=47.6, mean=5.5, bright tile=0.000, block ratio=0.64)",RECAPTURE,day,images/img_17_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+9,img_01_2,0.801335,"dark (Lap=353.6, mean=3.5, bright tile=0.000, block ratio=1.23)",RECAPTURE,night,images/img_01_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+10,img_05_3,0.786768,"glare (Lap=1324.5, mean=123.9, bright tile=0.258, block ratio=1.33)",RECAPTURE,day,images/img_05_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+11,img_06_2,0.672645,"compression (Lap=347.3, mean=26.9, bright tile=0.002, block ratio=3.70)",RECAPTURE,night,images/img_06_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+12,img_05_2,0.633449,"compression (Lap=804.4, mean=120.9, bright tile=0.010, block ratio=3.11)",RECAPTURE,day,images/img_05_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+13,img_23_2,0.627869,"compression (Lap=678.9, mean=115.9, bright tile=0.007, block ratio=3.04)",RECAPTURE,day,images/img_23_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+14,img_01_3,0.606879,"compression (Lap=1094.1, mean=29.3, bright tile=0.003, block ratio=2.78)",RECAPTURE,night,images/img_01_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+15,img_13_2,0.580306,"compression (Lap=1206.6, mean=32.3, bright tile=0.008, block ratio=2.49)",RECAPTURE,night,images/img_13_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+16,img_16_3,0.530701,"compression (Lap=671.1, mean=123.0, bright tile=0.008, block ratio=2.04)",RECAPTURE,day,images/img_16_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+17,img_03_3,0.515122,"compression (Lap=375.7, mean=33.0, bright tile=0.003, block ratio=1.91)",RECAPTURE,night,images/img_03_3.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+18,img_19_2,0.474192,"below thresholds (Lap=908.9, mean=117.7, bright tile=0.016, block ratio=1.62)",KEEP,day,images/img_19_2.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+19,img_23_1,0.457787,"below thresholds (Lap=1052.0, mean=116.3, bright tile=0.010, block ratio=1.52)",KEEP,day,images/img_23_1.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z
+20,img_05_0,0.419292,"below thresholds (Lap=1505.5, mean=122.1, bright tile=0.009, block ratio=1.30)",KEEP,day,images/img_05_0.jpg,Phung Danh Khoa,approve,,,2026-11-14T10:39:21.114Z

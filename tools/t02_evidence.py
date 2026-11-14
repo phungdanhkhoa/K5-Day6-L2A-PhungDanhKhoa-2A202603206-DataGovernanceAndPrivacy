@@ -1,4 +1,4 @@
-"""Generate local T02 evaluation and replay a disclosed visual review."""
+"""Generate local T02 evaluation and replay the submitted reviewer decisions."""
 
 import subprocess
 import sys
@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from src.common.io import read_json
-from src.common.review import AuditLog
+from src.common.review import AuditLog, load_review_decisions
 
 
 EVIDENCE = Path("reports/evidence")
@@ -21,19 +21,16 @@ def call(module, *args):
     subprocess.run([sys.executable, "-m", module, *map(str, args)], check=True)
 
 
-def review_poc(output: Path, gold: pd.DataFrame) -> None:
+def review_poc(output: Path) -> None:
+    source = EVIDENCE / "review_queue_reviewed.csv"
     queue = pd.read_csv(output / "review_queue.csv", keep_default_na=False)
-    joined = queue.join(gold.set_index("image_id"), on="item_id", validate="one_to_one")
-    for row in joined.itertuples():
-        action = "RECAPTURE" if row.is_defect else "KEEP"
-        queue.loc[row.Index, ["reviewer", "reviewer_decision", "override_value", "review_note"]] = [
-            "Codex visual assessment (AI)",
-            "approve" if action == row.suggested_action else "edit",
-            "" if action == row.suggested_action else action,
-            f"Visual gold: {row.defect_type}. Demonstration replay. Human sign-off pending.",
-        ]
-    queue.to_csv(output / "review_queue_reviewed.csv", index=False)
-    queue.to_csv(EVIDENCE / "review_queue_reviewed.csv", index=False)
+    reviewed = pd.read_csv(source, keep_default_na=False)
+    fields = ["rank", "item_id", "score", "reason", "suggested_action", "slice", "evidence_path"]
+    pd.testing.assert_frame_equal(queue[fields], reviewed[fields])
+    decisions = load_review_decisions(source)
+    if len(decisions) != len(queue) or decisions.reviewer_decision.eq("skip").any():
+        raise ValueError("Submitted review must resolve every queued item")
+    (output / source.name).write_bytes(source.read_bytes())
 
 
 def main() -> None:
@@ -44,7 +41,6 @@ def main() -> None:
         output = ROOT.with_name(f"{ROOT.name}-{suffix}")
         suffix += 1
     EVIDENCE.mkdir(parents=True, exist_ok=True)
-    gold = pd.read_csv(GOLD)
     for name in ("baseline", "poc"):
         destination = output / name
         module = "src.t02_baseline" if name == "baseline" else "src.pipeline"
@@ -55,7 +51,7 @@ def main() -> None:
         (EVIDENCE / f"{name}_run_info.json").write_bytes((destination / "run_info.json").read_bytes())
         predictions = pd.read_csv(pred)
         if name == "poc":
-            review_poc(destination, gold)
+            review_poc(destination)
             call("src.main", *COMMON, "--output", destination)
             reviewed = pd.read_csv(pred)
             pd.testing.assert_frame_equal(reviewed[["image_id", "score"]], predictions[["image_id", "score"]])

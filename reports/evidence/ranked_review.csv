@@ -46,7 +46,7 @@ img_03_3,0.5151224655092331,compression,RECAPTURE,RECAPTURE,approve,eval,night,c
 img_08_2,0.5116181459327632,compression,RECAPTURE,RECAPTURE,outside_queue,dev,dusk,cam_A,images/img_08_2.jpg,"compression (Lap=478.9, mean=90.7, bright tile=0.005, block ratio=1.89)"
 img_12_0,0.48038259189808674,none,KEEP,KEEP,outside_queue,dev,dusk,cam_B,images/img_12_0.jpg,"below thresholds (Lap=166.4, mean=88.6, bright tile=0.003, block ratio=1.66)"
 img_22_0,0.47927269713537013,none,KEEP,KEEP,outside_queue,dev,dusk,cam_A,images/img_22_0.jpg,"below thresholds (Lap=1095.5, mean=90.5, bright tile=0.006, block ratio=1.66)"
-img_19_2,0.4741921121342437,none,KEEP,RECAPTURE,edit,eval,day,cam_A,images/img_19_2.jpg,"below thresholds (Lap=908.9, mean=117.7, bright tile=0.016, block ratio=1.62)"
+img_19_2,0.4741921121342437,none,KEEP,KEEP,approve,eval,day,cam_A,images/img_19_2.jpg,"below thresholds (Lap=908.9, mean=117.7, bright tile=0.016, block ratio=1.62)"
 img_23_1,0.45778667991789423,none,KEEP,KEEP,approve,eval,day,cam_A,images/img_23_1.jpg,"below thresholds (Lap=1052.0, mean=116.3, bright tile=0.010, block ratio=1.52)"
 img_10_0,0.448295714512834,none,KEEP,KEEP,outside_queue,dev,day,cam_A,images/img_10_0.jpg,"below thresholds (Lap=1248.5, mean=119.7, bright tile=0.008, block ratio=1.46)"
 img_00_0,0.4369675767556533,none,KEEP,KEEP,outside_queue,dev,day,cam_B,images/img_00_0.jpg,"below thresholds (Lap=266.9, mean=118.4, bright tile=0.001, block ratio=1.40)"

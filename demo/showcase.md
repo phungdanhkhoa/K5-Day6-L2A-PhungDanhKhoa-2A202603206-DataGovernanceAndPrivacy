@@ -26,6 +26,6 @@
 
 ## 4 · Review và phát hành
 
-- REWORK trong demo: replay 19 approve và 1 edit, giữ nguyên điểm xếp hạng.
-- Thử lại với người duyệt thật bằng cách xuất CSV từ contact sheet rồi chạy CLI.
+- REWORK sau review của Phung Danh Khoa. 20 approve xác nhận 17 RECAPTURE và 3 KEEP, giữ nguyên điểm xếp hạng.
+- Tái lập bằng CSV đã xuất từ contact sheet hoặc chạy công cụ tạo evidence.
 - Câu hỏi thảo luận: với cùng B=20, làm sao cải thiện lóa ban đêm mà không tăng bỏ sót nén ban ngày? [Review và audit](../reports/evidence)
