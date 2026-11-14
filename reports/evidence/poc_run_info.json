@@ -1,0 +1,26 @@
+{
+  "track": "t02",
+  "run_name": "poc",
+  "status": 0,
+  "seed": 42,
+  "offline": true,
+  "input": "fixtures/t02_raw_qc",
+  "output": "out/evidence/poc",
+  "pipeline": "src.pipeline",
+  "config_hash": "c15129008ac4",
+  "git_sha": "67ffafd",
+  "runtime_seconds": 0.17,
+  "stats": {
+    "n_items": 96
+  },
+  "machine": {
+    "python": "3.11.12",
+    "platform": "macOS-27.2.1-arm64-arm-64bit",
+    "processor": "arm"
+  },
+  "output_check": {
+    "pred_file": "out/evidence/poc/ranked_review.csv",
+    "exists": true,
+    "missing_columns": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "track": "t02",
+  "run_name": "baseline",
+  "status": 0,
+  "seed": 42,
+  "offline": true,
+  "input": "fixtures/t02_raw_qc",
+  "output": "out/evidence/baseline",
+  "pipeline": "src.t02_baseline",
+  "config_hash": "be7f7299e73d",
+  "git_sha": "67ffafd",
+  "runtime_seconds": 0.1724,
+  "stats": {
+    "n_items": 96
+  },
+  "machine": {
+    "python": "3.11.12",
+    "platform": "macOS-27.2.1-arm64-arm-64bit",
+    "processor": "arm"
+  },
+  "output_check": {
+    "pred_file": "out/evidence/baseline/ranked_review.csv",
+    "exists": true,
+    "missing_columns": []
+  }
+}

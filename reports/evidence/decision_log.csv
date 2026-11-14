@@ -1,0 +1,3 @@
+ts,scope,status,canonical,reason_code,reason,owner,evidence
+2026-11-14T08:48:42+00:00,t02/eval,HOLD,HOLD,REVIEW_PENDING,Complete the priority queue and resolve escalations.,T02 QC release reviewer,ranked_review.csv;review_queue.csv;audit_log.jsonl
+2026-11-14T08:48:45+00:00,t02/eval,REWORK,REWORK,RECAPTURE_REQUIRED,Recapture flagged images before release.,T02 QC release reviewer,ranked_review.csv;review_queue.csv;audit_log.jsonl

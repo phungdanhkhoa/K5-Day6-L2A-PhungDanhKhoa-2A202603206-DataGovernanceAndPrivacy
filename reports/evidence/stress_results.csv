@@ -1,0 +1,11 @@
+image_id,light,split,defect_type,is_defect,severity,baseline_action,baseline_type,poc_action,poc_type
+stress_00,day,eval,none,0,0,KEEP,none,KEEP,none
+stress_01,night,eval,none,0,0,KEEP,none,KEEP,none
+stress_02,dusk,eval,blur,1,1,RECAPTURE,blur,RECAPTURE,blur
+stress_03,day,eval,blur,1,2,RECAPTURE,blur,RECAPTURE,blur
+stress_04,night,eval,dark,1,1,RECAPTURE,blur,RECAPTURE,dark
+stress_05,day,eval,dark,1,2,RECAPTURE,blur,RECAPTURE,dark
+stress_06,day,eval,glare,1,2,KEEP,none,RECAPTURE,glare
+stress_07,night,eval,glare,1,1,KEEP,none,RECAPTURE,glare
+stress_08,day,eval,compression,1,1,KEEP,none,RECAPTURE,compression
+stress_09,dusk,eval,compression,1,2,KEEP,none,RECAPTURE,compression

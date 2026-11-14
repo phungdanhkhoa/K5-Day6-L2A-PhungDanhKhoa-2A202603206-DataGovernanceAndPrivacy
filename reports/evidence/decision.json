@@ -1,0 +1,20 @@
+{
+  "status": "REWORK",
+  "reason_code": "RECAPTURE_REQUIRED",
+  "reason": "Recapture flagged images before release.",
+  "owner": "T02 QC release reviewer",
+  "scope": "t02/eval",
+  "evidence": [
+    "ranked_review.csv",
+    "review_queue.csv",
+    "audit_log.jsonl"
+  ],
+  "metrics": {
+    "eval_images": 40,
+    "pending": 0,
+    "unresolved": 0,
+    "recaptures": 18
+  },
+  "ts": "2026-11-14T08:48:45+00:00",
+  "canonical": "REWORK"
+}

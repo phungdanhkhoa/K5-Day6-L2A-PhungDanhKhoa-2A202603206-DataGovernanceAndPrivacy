@@ -63,8 +63,11 @@ def main() -> None:
             reviewed_events = [event for event in events if event["action"].startswith("review:")]
             assert len(reviewed_events) == 20
             assert read_json(destination / "decision.json")["status"] == "REWORK"
-            for name in ("audit_log.jsonl", "decision_log.csv", "decision.json", "ranked_review.csv"):
-                (EVIDENCE / name).write_bytes((destination / name).read_bytes())
+            for filename in ("audit_log.jsonl", "decision_log.csv", "decision.json",
+                             "ranked_review.csv", "review_queue.csv"):
+                (EVIDENCE / filename).write_text((destination / filename).read_text(encoding="utf-8"),
+                                                 encoding="utf-8")
+            Path("demo/contact_sheet.html").write_bytes((destination / "contact_sheet.html").read_bytes())
         else:
             (EVIDENCE / "baseline_ranked_review.csv").write_bytes(pred.read_bytes())
     call("src.compare", "reports/metrics_baseline.json", "reports/metrics_poc.json",
